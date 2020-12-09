@@ -1,15 +1,26 @@
-def function(a):
-	pass
 
 
 
-def my_test(function):
-	print('Тест ', function.__doc__)
-	print('testcase #1: ', end='')
-	test_case=''
-	control_case=''
-	test_try=function(test_case)
-	print ('Ok' if test_try==control_case else 'Fail') 	            
+
+def f_plus(a,b):
+    """ сложение
+    >>> f_plus(1,1) + 1
+    2
+
+    """
+    return a+b
+
+def multiply(a,b):
+    """
+    >>> multiply('a',4)
+    'aaaaa'
+    """
+    return a*b
+
 
 if __name__ == '__main__':
-	my_test(function)
+    import doctest
+    doctest.testmod()
+    # print(f"{f_plus(1,1)=}")
+    # help('doctest')
+
