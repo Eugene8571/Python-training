@@ -1,4 +1,10 @@
+
 def distr_candies(candies, num_people):
+    assert candies is int(candies)
+    """some text
+    >>> print(distr_candies(7,4))
+    0
+    """
     A = [0] * num_people
     n = candies
     m = 0
@@ -16,5 +22,10 @@ def distr_candies(candies, num_people):
     return A
 
 
-print(distr_candies(7,4))
-print(distr_candies(10,3))
+# print(distr_candies(7,4))
+# print(distr_candies(10,3))
+
+# if __name__ == "__main__":
+import doctest
+doctest.testmod()
+
